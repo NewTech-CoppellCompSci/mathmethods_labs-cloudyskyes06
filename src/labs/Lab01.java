@@ -60,7 +60,12 @@ public class Lab01 {
 		int sideB = inKey5.nextInt();
 		
 		//A^2 + B^2 = C^2
-		
+		//get the square root for both inputs and then square the sum 
+		double num3 = sideA* sideA;
+		double num4 = sideB * sideB;
+		double num5 = num3 + num4;
+		double sum = Math.sqrt(num5);
+		System.out.println("Hypotenuse = " + sum );
 
 	}
 
@@ -69,7 +74,30 @@ public class Lab01 {
 	
 	public static void problem04() {
 		
+Scanner inKey6 = new Scanner(System.in);
 		
+		
+		boolean isZero = false;
+		int input;
+		int total = 0; 
+		int count = 0;
+		int max = Integer.MIN_VALUE; 
+		int min = Integer.MAX_VALUE; 
+		while(!isZero) {  
+			
+			System.out.print("Enter Any Number: ");
+			input = inKey6.nextInt();
+			
+			total += input;
+			count ++;
+			
+			if (input == 0) {
+				isZero = true;
+			}
+			
+		}
+
+		System.out.println("Max = " + max + "\nMin = " + min );
 		
 	}
 	
