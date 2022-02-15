@@ -45,19 +45,19 @@ public class Lab02 {
 	
 	public static void problem02() {
 		
-		//Scanner inKey3 = new Scanner(System.in);
-		//System.out.println("Enter the Radius for the cylinder: ");
-		//int raduis = inKey3.nextInt();
+		Scanner inKey3 = new Scanner(System.in);
+		System.out.println("Enter the Radius for the cylinder: ");
+		int raduis = inKey3.nextInt();
 		
-		//Scanner inKey4 = new Scanner(System.in);
-		//System.out.println("Enter the Height for the cylinder: ");
-		//int height = inKey4.nextInt();
+		Scanner inKey4 = new Scanner(System.in);
+		System.out.println("Enter the Height for the cylinder: ");
+		int height = inKey4.nextInt();
 		
-		//double pi = Math.PI;
+		double pi = Math.PI;
 		
-		//double volume = pi * Math.pow(raduis, 2) * height;
+		double volume = pi * Math.pow(raduis, 2) * height;
 		
-		//System.out.println("The volume of the cylinder is " + volume);
+		System.out.println("The volume of the cylinder is " + volume);
 	}
 
 	
@@ -111,19 +111,22 @@ public class Lab02 {
 		System.out.println("Enter c-value: ");
 		double cval = inKey11.nextInt();
 		
-		double here = Math.pow(bval, 2);
-		double ac = 4 * aval * cval;
-		double almost3 = here - ac;
-		double closer = Math.sqrt(almost3);
-		double Bval = -bval;
-		double negative = Bval -+ almost3;
-		double divide = aval * 2;
-		double closer2 = negative / divide;
+		double bTimes = bval * -1;
+		double bPow = Math.pow(bval, 2);
+		double aTimesC = 4 * aval * cval;
+		double aTimes = 2 * aval;
+		double equation = bPow - aTimesC;
+		double square = Math.sqrt(equation);
+		
+		double minus = bTimes - square;
+		double plus = bTimes + square;
+		double minus2 = minus / aTimes;
+		double plus2 = plus / aTimes;
+		
+		System.out.println("x1 = " + plus2);
+		System.out.println("x2 = " + minus2);
 		
 		
-		
-		
-		System.out.println("x = " + closer2);
 		
 	}
 	
