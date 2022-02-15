@@ -74,19 +74,22 @@ public class Lab01 {
 	
 	public static void problem04() {
 		
-Scanner inKey6 = new Scanner(System.in);
+		Scanner inKey6 = new Scanner(System.in);
 		
-		
+
 		boolean isZero = false;
-		int input;
+		int input ;
 		int total = 0; 
 		int count = 0;
-		int max = Integer.MIN_VALUE; 
-		int min = Integer.MAX_VALUE; 
+
+		 
+		
 		while(!isZero) {  
 			
 			System.out.print("Enter Any Number: ");
 			input = inKey6.nextInt();
+			
+			
 			
 			total += input;
 			count ++;
@@ -96,8 +99,10 @@ Scanner inKey6 = new Scanner(System.in);
 			}
 			
 		}
-
-		System.out.println("Max = " + max + "\nMin = " + min );
+		input = inKey6.nextInt();
+		int minn = Math.min(input, input);
+		int max = Math.max(input, input);
+		System.out.println("Max = " + max + "\nMin = " + minn );
 		
 	}
 	
