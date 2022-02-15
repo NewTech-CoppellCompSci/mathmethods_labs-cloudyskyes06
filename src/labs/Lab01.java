@@ -76,33 +76,26 @@ public class Lab01 {
 		
 		Scanner inKey6 = new Scanner(System.in);
 		
-
-		boolean isZero = false;
-		int input ;
-		int total = 0; 
-		int count = 0;
-
-		 
+		int input = -1 ;
+		int max = Integer.MIN_VALUE;
+		int min = Integer.MAX_VALUE;
+	 
 		
-		while(!isZero) {  
+		while(input !=0) {  
+			
+			
 			
 			System.out.print("Enter Any Number: ");
 			input = inKey6.nextInt();
+			min = Math.min(min, input);
+			max = Math.max(max, input);
 			
 			
-			
-			total += input;
-			count ++;
-			
-			if (input == 0) {
-				isZero = true;
-			}
 			
 		}
-		input = inKey6.nextInt();
-		int minn = Math.min(input, input);
-		int max = Math.max(input, input);
-		System.out.println("Max = " + max + "\nMin = " + minn );
+		
+		
+		System.out.println("Max = " + max + "\nMin = " + min );
 		
 	}
 	
