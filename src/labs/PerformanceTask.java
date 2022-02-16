@@ -21,18 +21,20 @@ public class PerformanceTask {
 		
 		boolean aboveGround = false;
 		int second = 1;
-		int lowestNumber = 0;
-		
-	
-		
-		
+		int lowestNumber = -1;
+		launchAngle = Math.cos(Math.toRadians(launchAngle));
+		double launchAngle2 = Math.sin(Math.toRadians(launchAngle));
+		double xposition = 0;
+		double yposition = 0;
 		while (!aboveGround) {
-			 
-			System.out.format("Time: " + second);
-			System.out.println("     x-pos: " + + "m");
-			System.out.println("     y-pos: " + + "m");
 			second ++;
-			if ( < lowestNumber) {
+			double xposition2 = launchAngle * second * launchVelocity;
+			 double yposition2 = launchAngle2 * second * launchVelocity - 0.5 * 9.8 * Math.pow(second, 2);
+			System.out.format("Time: " + second);
+			System.out.println("     x-pos: " + xposition2 + "m");
+			System.out.println("     y-pos: " + yposition2 +"m");
+			
+			if (yposition < lowestNumber) {
 				aboveGround = true;
 			}
 			
